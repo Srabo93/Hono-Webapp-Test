@@ -2,6 +2,7 @@ services:
   server:
     build:
       context: .
+    container_name: "server"
     environment:
       NODE_ENV: production
     ports:
@@ -15,6 +16,7 @@ services:
       - ./:/app
   db:
     image: postgres
+    container_name: "db"
     restart: always
     user: postgres
     secrets:

@@ -13,7 +13,7 @@ const client = new Client({
   database: "example",
 });
 
-await client.connect();
+const dbConnection = async () => await client.connect();
 
 const db = drizzle(client);
 
