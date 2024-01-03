@@ -2,20 +2,6 @@ import { Hono } from "hono";
 import { serveStatic } from "@hono/node-server/serve-static";
 import Home from "./pages/home";
 import { Post } from "./typings";
-import { drizzle } from "drizzle-orm/node-postgres";
-import { Client } from "pg";
-
-const client = new Client({
-  host: "db",
-  port: 5432,
-  user: "postgres",
-  password: "pogchamp",
-  database: "example",
-});
-
-const dbConnection = async () => await client.connect();
-
-const db = drizzle(client);
 
 const app = new Hono();
 

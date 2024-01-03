@@ -8,6 +8,34 @@
       "when": 1703960558816,
       "tag": "0000_tough_mongu",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704286909889,
+      "tag": "0001_exotic_carnage",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704290048782,
+      "tag": "0002_normal_the_stranger",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1704290089016,
+      "tag": "0003_unknown_captain_cross",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1704290919594,
+      "tag": "0004_pink_black_widow",
+      "breakpoints": true
     }
   ]
 }
