@@ -16,3 +16,7 @@ export const usersProducts = pgTable(
     pk: primaryKey({ columns: [table.userId, table.productId] }),
   }),
 );
+
+export type UsersProducts = typeof usersProducts.$inferSelect;
+
+//INFO: maybe the notNull is needed, depending on how relations are build
