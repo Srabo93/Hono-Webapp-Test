@@ -2,8 +2,14 @@ import { Hono } from "hono";
 import { serveStatic } from "@hono/node-server/serve-static";
 import Home from "./pages/home";
 import { Post } from "./typings";
+import { db } from "./db/db-pool";
 
 const app = new Hono();
+
+async function test() {
+  //TODO: we are not getting autocompletion here even though the schemas in the config take the glob pattern. Maybe leave the glob pattern and import them manually AB test
+  let result = db.query;
+}
 
 const posts: Post[] = [
   {
