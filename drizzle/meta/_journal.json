@@ -36,6 +36,20 @@
       "when": 1704290919594,
       "tag": "0004_pink_black_widow",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1704650621510,
+      "tag": "0005_common_mikhail_rasputin",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1704652640813,
+      "tag": "0006_certain_amazoness",
+      "breakpoints": true
     }
   ]
 }

@@ -1,36 +1,36 @@
 import { relations } from "drizzle-orm";
-import { product } from "./schema/product";
-import { productCategory } from "./schema/productCategory";
-import { user } from "./schema/user";
+import { products } from "./schema/products";
+import { productCategories } from "./schema/productCategories";
+import { users } from "./schema/users";
 import { usersProducts } from "./schema/usersProducts";
 
 export const productCategoryRelations = relations(
-  productCategory,
+  productCategories,
   ({ many }) => ({
-    product: many(product),
+    products: many(products),
   }),
 );
 
-export const productRelations = relations(product, ({ one, many }) => ({
-  category: one(productCategory, {
-    fields: [product.id],
-    references: [productCategory.id],
+export const productRelations = relations(products, ({ one, many }) => ({
+  category: one(productCategories, {
+    fields: [products.categoryId],
+    references: [productCategories.id],
   }),
   usersProducts: many(usersProducts),
 }));
 
-export const userRelations = relations(user, ({ many }) => ({
-  product: many(product),
+export const userRelations = relations(users, ({ many }) => ({
+  products: many(products),
   usersProducts: many(usersProducts),
 }));
 
 export const usersProductsRelations = relations(usersProducts, ({ one }) => ({
-  user: one(user, {
+  users: one(users, {
     fields: [usersProducts.userId],
-    references: [user.id],
+    references: [users.id],
   }),
-  product: one(product, {
+  products: one(products, {
     fields: [usersProducts.productId],
-    references: [product.id],
+    references: [products.id],
   }),
 }));
